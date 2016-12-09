@@ -8,22 +8,22 @@ class QLabel;
 class QLineEdit;
 class QPushButton;
 
-class FindDialog::public QDialog 
+class FindDialog : public QDialog
 {
-
     Q_OBJECT
 
- public :
+public :
     FindDialog(QWidget* parent = 0);
- signals:
+
+signals:
     void findNext(const QString &str, Qt::CaseSensitivity cs);
     void findPrevious(const QString &str, Qt::CaseSensitivity cs);
 
- private slots:
+private slots:
     void findClicked();
     void enableFindButton(const QString &text);
 
- private:
+private:
     QLabel *label;
     QLineEdit *lineEdit;
     QCheckBox *caseCheckBox;
@@ -32,4 +32,4 @@ class FindDialog::public QDialog
     QPushButton *closeButton;
 };
 
-#endif
+#endif // FINDDIALOG_H
