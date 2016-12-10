@@ -27,11 +27,11 @@ QT_BEGIN_NAMESPACE
 class Ui_GoToCellDialog
 {
 public:
-    QVBoxLayout *verticalLayout;
-    QHBoxLayout *horizontalLayout;
+    QVBoxLayout *mainLayout;
+    QHBoxLayout *topLayout;
     QLabel *label;
     QLineEdit *lineEdit;
-    QHBoxLayout *horizontalLayout_2;
+    QHBoxLayout *bottomLayout;
     QSpacerItem *horizontalSpacer;
     QPushButton *okButton;
     QPushButton *cancelButton;
@@ -41,42 +41,42 @@ public:
         if (GoToCellDialog->objectName().isEmpty())
             GoToCellDialog->setObjectName(QStringLiteral("GoToCellDialog"));
         GoToCellDialog->resize(232, 80);
-        verticalLayout = new QVBoxLayout(GoToCellDialog);
-        verticalLayout->setObjectName(QStringLiteral("verticalLayout"));
-        horizontalLayout = new QHBoxLayout();
-        horizontalLayout->setObjectName(QStringLiteral("horizontalLayout"));
+        mainLayout = new QVBoxLayout(GoToCellDialog);
+        mainLayout->setObjectName(QStringLiteral("mainLayout"));
+        topLayout = new QHBoxLayout();
+        topLayout->setObjectName(QStringLiteral("topLayout"));
         label = new QLabel(GoToCellDialog);
         label->setObjectName(QStringLiteral("label"));
 
-        horizontalLayout->addWidget(label);
+        topLayout->addWidget(label);
 
         lineEdit = new QLineEdit(GoToCellDialog);
         lineEdit->setObjectName(QStringLiteral("lineEdit"));
 
-        horizontalLayout->addWidget(lineEdit);
+        topLayout->addWidget(lineEdit);
 
 
-        verticalLayout->addLayout(horizontalLayout);
+        mainLayout->addLayout(topLayout);
 
-        horizontalLayout_2 = new QHBoxLayout();
-        horizontalLayout_2->setObjectName(QStringLiteral("horizontalLayout_2"));
+        bottomLayout = new QHBoxLayout();
+        bottomLayout->setObjectName(QStringLiteral("bottomLayout"));
         horizontalSpacer = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
-        horizontalLayout_2->addItem(horizontalSpacer);
+        bottomLayout->addItem(horizontalSpacer);
 
         okButton = new QPushButton(GoToCellDialog);
         okButton->setObjectName(QStringLiteral("okButton"));
         okButton->setEnabled(false);
 
-        horizontalLayout_2->addWidget(okButton);
+        bottomLayout->addWidget(okButton);
 
         cancelButton = new QPushButton(GoToCellDialog);
         cancelButton->setObjectName(QStringLiteral("cancelButton"));
 
-        horizontalLayout_2->addWidget(cancelButton);
+        bottomLayout->addWidget(cancelButton);
 
 
-        verticalLayout->addLayout(horizontalLayout_2);
+        mainLayout->addLayout(bottomLayout);
 
 #ifndef QT_NO_SHORTCUT
         label->setBuddy(lineEdit);
@@ -94,7 +94,7 @@ public:
 
     void retranslateUi(QWidget *GoToCellDialog)
     {
-        GoToCellDialog->setWindowTitle(QApplication::translate("GoToCellDialog", "Go to Cell", 0));
+        GoToCellDialog->setWindowTitle(QApplication::translate("GoToCellDialog", "Go To Cell", 0));
         label->setText(QApplication::translate("GoToCellDialog", "&Cell Location:", 0));
         okButton->setText(QApplication::translate("GoToCellDialog", "OK", 0));
         cancelButton->setText(QApplication::translate("GoToCellDialog", "Cancel", 0));

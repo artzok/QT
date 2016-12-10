@@ -11,11 +11,11 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Go to Cell</string>
+   <string>Go To Cell</string>
   </property>
-  <layout class="QVBoxLayout" name="verticalLayout">
+  <layout class="QVBoxLayout" name="mainLayout">
    <item>
-    <layout class="QHBoxLayout" name="horizontalLayout">
+    <layout class="QHBoxLayout" name="topLayout">
      <item>
       <widget class="QLabel" name="label">
        <property name="text">
@@ -32,7 +32,7 @@
     </layout>
    </item>
    <item>
-    <layout class="QHBoxLayout" name="horizontalLayout_2">
+    <layout class="QHBoxLayout" name="bottomLayout">
      <item>
       <spacer name="horizontalSpacer">
        <property name="orientation">
