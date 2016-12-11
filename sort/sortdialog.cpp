@@ -33,6 +33,6 @@ void SortDialog::setColumnRange(QChar first, QChar last)
 
 void SortDialog::on_moreButton_toggled(bool selected)
 {
-    moreButton->toggle();setText(selected ? tr("&More<<<"):tr("&More>>>"));
+    moreButton->setText(selected ? tr("&More<<<") : tr("&More>>>"));
 }
 
